@@ -22,36 +22,7 @@ const TypeMapIcon: Record<string, string> = {
 
 @Component
 export struct KnowledgeMapContent {
-  scroller: Scroller = new Scroller();
-  @State section: Section = {
-    "title": "构建应用",
-    "brief": "为了帮助开发者更好的理解HarmonyOS提供的能力，我们对重点功能提供了开发指导，辅助开发者完成应用的开发。",
-    "materials": [
-      {
-        "subtitle": "开发工具",
-        "knowledgeBase": [
-          { "type": "指南", "title": "DevEco Studio" },
-          { "type": "指南", "title": "低代码开发" },
-          { "type": "视频教程", "title": "使用DevEco Studio高效开发" }
-        ]
-      },
-      {
-        "subtitle": "开发语言",
-        "knowledgeBase": [
-          { "type": "指南", "title": "ArkTS" },
-          { "type": "视频教程", "title": "ArkTS基础知识" },
-          { "type": "指南", "title": "ArkTS开发实践" }
-        ]
-      },
-      {
-        "subtitle": "开发框架",
-        "knowledgeBase": [
-          { "type": "指南", "title": "ArkTS" },
-          { "type": "视频教程", "title": "ArkUI之属性动画" }
-        ]
-      }
-    ]
-  };
+  @Prop section: Section;
 
   @Builder
   KnowledgeBlockLine(knowledgeBaseItem: KnowledgeBaseItem) {
@@ -112,7 +83,7 @@ export struct KnowledgeMapContent {
   }
 
   build() {
-    Scroll(this.scroller) {
+    // Scroll(this.scroller) {
       Column() {
         Text(this.section?.title)
           .fontFamily('HarmonyHeiTi-Bold')
@@ -133,13 +104,13 @@ export struct KnowledgeMapContent {
       .alignItems(HorizontalAlign.Start)
       .padding({top: 12, left: 16, bottom: 12, right: 16})
       .backgroundColor('#F1F3F5')
-    }
-    .align(Alignment.TopStart)
-    .constraintSize({ minHeight: '100%' })
-    .edgeEffect(EdgeEffect.Spring)
-    .scrollable(ScrollDirection.Vertical)
-    .scrollBar(BarState.Auto)
-    .backgroundColor('#F1F3F5')
+    // }
+    // .align(Alignment.TopStart)
+    // .constraintSize({ minHeight: '100%' })
+    // .edgeEffect(EdgeEffect.Spring)
+    // .scrollable(ScrollDirection.Vertical)
+    // .scrollBar(BarState.Auto)
+    // .backgroundColor('#F1F3F5')
 
 
   }
