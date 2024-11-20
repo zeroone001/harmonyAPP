@@ -9,11 +9,11 @@ export struct CourseLearning {
   build() {
     Row() {
       Column() {
-        // Text(this.message)
-        //   .fontSize(50)
-        //   .fontWeight(FontWeight.Bold)
-        Web({ src: $rawfile('course_learning/index.html'), controller: this.webviewController })
-          .domStorageAccess(true)
+        Text(this.message)
+          .fontSize(50)
+          .fontWeight(FontWeight.Bold)
+        // Web({ src: $rawfile('course_learning/index.html'), controller: this.webviewController })
+        //   .domStorageAccess(true)
       }
       .width('100%')
     }
