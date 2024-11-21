@@ -1,4 +1,4 @@
-import { QuickStartPage } from '@ohos/quickstart';
+// import { QuickStartPage } from '@ohos/quickstart';
 // import { CourseLearning } from '@ohos/learning';
 // import { KnowledgeMap, KnowledgeMapContent } from '@ohos/map';
 
@@ -38,7 +38,7 @@ struct Index {
     Tabs({ barPosition: BarPosition.End, controller: this.tabsController }){
       TabContent() {
         // Text('TabContent1')
-        QuickStartPage()
+        // QuickStartPage()
       }
       .tabBar(this.tabBarBuilder('快速入门', 0, $r('app.media.ic_01_on'), $r('app.media.ic_01_off')))
 
