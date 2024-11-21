@@ -9,6 +9,8 @@ import { BannerDetailPage } from './BannerDetailPage';
 import { ArticleClass } from '../model/ArticleClass';
 import { BannerClass } from '../model/BannerClass';
 
+import { Header } from '../view/Header';
+
 // @Entry
 @Component
 export struct QuickStartPage {
@@ -29,6 +31,7 @@ export struct QuickStartPage {
     Navigation(this.articlePathStack) {
       Scroll() {
         Column() {
+          Header()
           Banner()
           EnablementView()
           TutorialView()
